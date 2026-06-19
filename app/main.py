@@ -1,7 +1,13 @@
 from fastapi import FastAPI
-import uvicorn
+from app.routes.jobs import router as jobs_router
 
-app = FastAPI()
+app = FastAPI(
+    title="JobSpy API",
+    version="1.0.0",
+)
+
+app.include_router(jobs_router)
+
 
 @app.get("/")
 def root():
