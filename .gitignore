@@ -1,0 +1,4 @@
+/.env
+/.venv
+/jobs.csv
+/test.py
